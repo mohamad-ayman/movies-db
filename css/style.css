@@ -1,0 +1,79 @@
+:root {
+    --main-bg: rgb(13,13,13);
+    --main-text: rgb(102,109,114);
+}
+body, html {
+    font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: auto !important;
+}
+body {
+    overflow: hidden;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+/* ********************************************************************************************************* */
+.loading-screen {
+    z-index: 9999;
+}
+/* ********************************************************************************************************* */
+nav {
+    z-index: 999;
+    transition: height .5s;
+    left: 0;
+}
+.side-nav ul li, .side-nav a {
+    cursor: pointer;
+    transition: color .3s, margin-top .3;
+}
+nav aside .logo-container{
+    width: 2rem;
+}
+/* ********************************************************************************************************* */
+.form-control {
+    border: none;
+    border-radius: 0;
+}
+input::placeholder {
+    text-align: center;
+}
+/* ********************************************************************************************************* */
+#main .item {
+    height: 540px;
+}
+#main .item .filter {
+    transition: top .8s ease-out;
+}
+#main .item:hover .filter {
+    top: 0 !important;
+}
+/* ********************************************************************************************************* */
+.invalid {
+    background-color: rgb(248,215,218);
+    color: black;
+}
+/* ********************************************************************************************************* */
+.bg-main {
+    background-color: var(--main-bg) !important;
+}
+.text-main {
+    color: var(--main-text) !important;
+}
+.text-tomato-hover:hover {
+    color: tomato !important;
+}
+.max-width-small {
+    max-width: 15rem;
+}
+.max-height-small {
+    max-height: 18rem;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.w-fit {
+    width: fit-content;
+}

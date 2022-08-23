@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/loading.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  
+  <link rel="shortcut icon" href="images/react.png" type="image/x-icon">
+  <title>JS Exam</title>
+</head>
+<body class="bg-main ps-5">
+
+  <div class="loading-screen bg-main position-fixed top-0 start-0 bottom-0 end-0">
+    <div class="loading-container">
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+  </div>
+
+  <nav id="side" class="position-fixed vh-100 text-white d-flex bg-main">
+    <div class="side-nav py-4 d-flex flex-column justify-content-between max-width-small">
+      <div class="ul-container overflow-hidden max-height-small">
+        <ul class="mb-0">
+          <li category="now_playing" class="mb-4 text-tomato-hover">
+            Now Playing
+          </li>
+          <li category="popular" class="mb-4 text-tomato-hover">
+            Popular
+          </li>
+          <li category="top_rated" class="mb-4 text-tomato-hover">
+            Top Rated
+          </li>
+          <li trending="trending" class="mb-4 text-tomato-hover">
+            Trending
+          </li>
+          <li category="upcoming" class="mb-4 text-tomato-hover">
+            Upcoming
+          </li>
+          <li class="">
+            <a class="text-white text-tomato-hover" href="#contact">
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </div>
+      <footer>
+        <div class="d-flex pb-4 pt-2 px-5">
+          <a class="text-white text-tomato-hover me-3" target="_blank" href="https://facebok.com">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a class="text-white text-tomato-hover me-3" target="_blank" href="https://twitter.com">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a class="text-white text-tomato-hover me-3" target="_blank" href="#">
+            <i class="fa-solid fa-globe"></i>
+          </a>
+        </div>
+        <div class="d-flex justify-content-center px-3">
+          <p class="text-main ">Copyright Â© 2019 All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+    <aside class="bg-white p-3 d-flex flex-column justify-content-between align-items-center">
+      <div class="logo-container">
+        <img class="w-100"
+        src="images/logo.png" alt="logo">
+      </div>
+      <div>
+        <i id="side-nav-btn" class="fa-solid fa-bars fa-2x cursor-pointer text-black"></i>
+      </div>
+      <div class="d-flex flex-column">
+        <i class="fa-solid fa-globe cursor-pointer text-black mb-3"></i>
+        <i class="fa-solid fa-share-nodes cursor-pointer text-black"></i>
+      </div>
+    </aside>
+  </nav>
+
+  <header id="search-header" class="py-5">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-6">
+          <input id="search-in-api" class="form-control bg-main border-bottom text-main"
+          type="text" name = "movieWordSearch" placeholder="Get movies by word...">
+        </div>
+        <div class="col-md-6">
+          <input id="search-in-current" class="form-control bg-main border-bottom text-main"
+          type="text" name="movieGeneralSearch" placeholder="Search...">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <div class="row gy-4">
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-white my-5" id="contact">
+    <form action="#">
+      <div class="container">
+        <div class="row">
+          <h2>Contact Us...</h2>
+        </div>
+        <div class="row my-3">
+          <div class="col-md-6">
+            <input class="form-control bg-main border-bottom text-main my-2 fw-bolder"
+            type="text" name="name" placeholder="Enter your name...">
+            <div class="invalid d-none p-3 rounded">
+              <span>Name is not valid</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <input class="form-control bg-main border-bottom text-main my-2 fw-bolder"
+            type="text" name="email" placeholder="Enter your email...">
+            <div class="invalid d-none p-3 rounded">
+              <span>Email is not valid</span>
+            </div>
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-md-6">
+            <input class="form-control bg-main border-bottom text-main my-2 fw-bolder"
+            type="text" name="phone" placeholder="Enter your phone...">
+            <div class="invalid d-none p-3 rounded">
+              <span>Phone is not valid</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <input class="form-control bg-main border-bottom text-main my-2 fw-bolder"
+            type="text" name="age" placeholder="Enter your age...">
+            <div class="invalid d-none p-3 rounded">
+              <span>Age is not valid</span>
+            </div>
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-md-6">
+            <input class="form-control bg-main border-bottom text-main my-2 fw-bolder"
+            type="password" name="password" placeholder="Enter your password...">
+            <div class="invalid d-none p-3 rounded">
+              <span>Password is not valid *Minimum eight characters, at least one letter and one number*</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <input class="form-control bg-main border-bottom text-main my-2 fw-bolder"
+            type="password" name="repassword" placeholder="Renter your password...">
+            <div class="invalid d-none p-3 rounded">
+              <span>Password re-entry is not valid</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <button class="disabled w-fit btn btn-outline-danger"
+          type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </footer>
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
